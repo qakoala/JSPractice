@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <title>AZ Javascript Trial</title>
+    <body id="body1" style="background-color:cadetblue">
+        <h1 style=color:white><span id= "span1" style=color:blue>Blue </span> or <span id="span2" style=color:green>Green</span></h1>
+        <p id="Intro"></p>
+        <button id="button1"></button>
+        <button id="button2"></button>
+        <p id="Outro"></p>
+    </body>
+
+    <script>
+
+        // Define variables
+        let intro = document.getElementById("Intro");
+        let b1 = document.getElementById("button1");
+        let b2 = document.getElementById("button2");
+
+        // Style the intro
+        intro.innerHTML="Will you pick the Blue or Green Pill?";
+        intro.style.fontSize="26px";
+        intro.style.fontWeight="bold";
+        intro.style.color="red";
+        
+        // Style the first button
+        b1.innerHTML="BLUE PILL";
+        b1.style.color="blue";
+        b1.style.backgroundColor="cyan";
+        b1.style.fontWeight="bold";
+       
+        // Style the second button
+        b2.innerHTML="GREEN PILL";
+        b2.style.color="green";
+        b2.style.backgroundColor="cyan";
+        b2.style.fontWeight="bold";
+
+        // Change text when clicking blue button
+        b1.onclick = function() {
+            b1Click();
+        }
+        function b1Click(){
+            b1.innerHTML="You Chose the Blue Pill!!";
+            b2.innerHTML="GREEN PILL";
+            document.getElementById("body1").style.backgroundColor="royalblue";
+            document.getElementById("span1").style.color="white";
+            document.getElementById("span2").style.color="white";
+        }
+
+        // Change text when clicking green button
+        b2.onclick = function() {
+            b2Click();
+        }
+        function b2Click(){
+            b2.innerHTML="You Chose the Green Pill!!";
+            b1.innerHTML="BLUE PILL";
+            document.getElementById("body1").style.backgroundColor="Green";
+            document.getElementById("span1").style.color="white";
+            document.getElementById("span2").style.color="white";
+        }
+
+    </script>
+</html>
