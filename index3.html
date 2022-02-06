@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>cars</h1>
+    <p id="p1"></p>
+    <p id="p2"></p>
+</body>
+
+<script>
+
+// Class and method examples
+
+    class Car {
+        constructor (model, year){
+            this.model= model;
+            this.year= year;
+        }
+        age() {
+            let age = 2022 - this.year;
+            return age;
+        }
+    }
+    let model1 = new Car('bmw', '2008')
+    document.getElementById('p1').innerHTML=model1.year + " " + model1.model;
+    document.getElementById('p2').innerHTML="This model is " + model1.age() + " years old"
+
+</script>
+
+</html>
